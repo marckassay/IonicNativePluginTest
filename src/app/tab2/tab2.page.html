@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab Two
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+
+    <ion-item>
+      <ion-label>
+        {{audiomode1}}
+      </ion-label>
+    </ion-item>
+    <ion-button item-start shape="round" color="primary" fill="outline" (click)="setAudioMode()">
+      set audio mode to NORMAL
+    </ion-button>
+    <ion-item-divider>
+    </ion-item-divider>
+
+    <ion-item>
+      <div *ngIf="audiomode2">
+        <ion-label>
+          {{audiomode2.label}} {{audiomode2.audioMode}}
+        </ion-label>
+      </div>
+    </ion-item>
+    <ion-button item-start shape="round" color="primary" fill="outline" (click)="getAudioMode()">
+      <div>get audio mode</div>
+    </ion-button>
+    <ion-item-divider>
+    </ion-item-divider>
+
+    <ion-item>
+      <ion-label>
+        {{voltype1}}
+      </ion-label>
+    </ion-item>
+    <ion-button item-start shape="round" color="primary" fill="outline" (click)="setVolume()">
+      set volume type for MUSIC
+    </ion-button>
+    <ion-item-divider>
+    </ion-item-divider>
+
+    <ion-item>
+      <div *ngIf="voltype2">
+        <ion-label>
+          {{voltype2}}
+        </ion-label>
+      </div>
+    </ion-item>
+    <ion-button item-start shape="round" color="primary" fill="outline" (click)="getVolume()">
+      <div>get volume type for MUSIC</div>
+    </ion-button>
+    <ion-item-divider>
+    </ion-item-divider>
+
+    <ion-item>
+      <div *ngIf="voltype3">
+        <ion-label>
+          {{voltype3}}
+        </ion-label>
+      </div>
+    </ion-item>
+    <ion-button item-start shape="round" color="primary" fill="outline" (click)="getMaxVolume()">
+      <div>get max volume type for MUSIC</div>
+    </ion-button>
+
+  </ion-list>
+</ion-content>
